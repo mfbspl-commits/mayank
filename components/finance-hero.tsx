@@ -15,7 +15,7 @@ import {
 import { motion } from 'framer-motion';
 
 const COMPRESSED_CSS =
-  ".finance-hero,.finance-hero *{box-sizing:border-box}.finance-hero{position:relative;display:flex;min-height:100svh;align-items:center;justify-content:center;overflow:hidden;background:var(--grad-scene);margin:0}.fh-rig{position:absolute;inset:0}.fh-abs{position:absolute;inset:0}.fh-cols{position:absolute;inset:0;z-index:2;display:flex;justify-content:space-between;padding:0 clamp(40px,10vw,160px);pointer-events:none}.fh-hex-sys{position:absolute;left:50%;top:50%;z-index:1;pointer-events:none;transform:translate(-50%,-50%)}.fh-vol{border-radius:50%;filter:blur(80px);mix-blend-mode:screen}.fh-vol-1{top:-8%;left:15%;width:45vw;height:45vw}.fh-vol-2{bottom:-5%;right:8%;width:38vw;height:38vw}.fh-vol-3{top:42%;left:2%;width:28vw;height:28vw}.fh-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.fh-holo{position:absolute;z-index:6}.fh-content{position:relative;z-index:20;text-align:center;max-width:820px;padding:0 24px;margin:0 20px}.fh-title{font-size:clamp(1.85rem,4.2vw,3.1rem);font-weight:800;line-height:1.1;letter-spacing:-.03em;color:#fff;margin:0 0 36px}.fh-sub{font-size:clamp(.95rem,1.8vw,1.15rem);color:#fff;line-height:1.65;max-width:520px;margin:0 auto 32px;opacity:.88}.fh-cta{display:inline-flex;align-items:center;gap:10px;padding:16px 34px;font-size:.95rem;font-weight:600;color:var(--primary);text-decoration:none;border-radius:999px;background:#fff;border:1px solid rgba(255,255,255,.2);box-shadow:0 4px 24px rgba(0,0,0,.18);position:relative;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}.fh-cta:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.22)}.fh-bars{display:flex;align-items:flex-end;gap:4px;height:36px;width:56px}.fh-candles{display:flex;align-items:flex-end;justify-content:center;gap:5px;height:36px;width:56px}.fh-line{width:56px;height:32px}@media(max-width:768px){.fh-hide-md{display:none!important}}.finance-hero{--primary:#002cce;--blue:#4d7cff;--blue-light:#6b9aff;--blue-deep:#001a80;--grad-scene:linear-gradient(145deg,#002cce,#001a80 35%,#0a0a12 65%,#000)}@keyframes hexScroll{0%{background-position:0 0}to{background-position:60px 104px}}@keyframes areaPulse{0%,to{opacity:.7}50%{opacity:1}}@keyframes areaLineDraw{0%{stroke-dashoffset:2800}45%{stroke-dashoffset:0}55%{stroke-dashoffset:0}to{stroke-dashoffset:-2800}}@keyframes volPulse{0%,to{opacity:.5;transform:scale(1)}50%{opacity:.85;transform:scale(1.08)}}@keyframes hexRingSpin{to{transform:translate(-50%,-50%) rotate(1turn)}}@keyframes colDrop{0%{opacity:0;top:-8%}8%{opacity:.9}92%{opacity:.9}to{opacity:0;top:108%}}@keyframes beamDrop{0%{opacity:0;transform:translateY(-80px)}10%{opacity:1}90%{opacity:1}to{opacity:0;transform:translateY(110vh)}}@keyframes geoPulse{0%,to{opacity:.5;transform:scaleY(1)}50%{opacity:1;transform:scaleY(1.2)}}@keyframes holoScan{0%,to{left:-100%}50%{left:150%}}@keyframes barPulse{0%,to{opacity:.7;transform:scaleY(1)}50%{opacity:1;transform:scaleY(1.15)}}@keyframes lineDraw{0%{opacity:.5;stroke-dashoffset:200}50%{opacity:1;stroke-dashoffset:0}to{opacity:.5;stroke-dashoffset:-200}}@keyframes donutSpin{to{transform:rotate(1turn)}}@keyframes candlePulse{0%,to{opacity:.65;transform:scaleY(1)}50%{opacity:1;transform:scaleY(1.1)}}@keyframes emblemDash{to{stroke-dashoffset:-240}}@keyframes emblemScan{to{stroke-dashoffset:180}}@keyframes emblemChartDraw{0%,to{opacity:.5;stroke-dashoffset:120}50%{opacity:1;stroke-dashoffset:0}}@keyframes emblemFloat{0%,to{transform:translate(-50%,-50%)}50%{transform:translate(-50%,-52%)}}@keyframes ctaShine{0%,to{transform:translateX(-150%)}50%{transform:translateX(150%)}}@keyframes holoFloat{0%,to{transform:translate(0,0)}50%{transform:translate(var(--hf-x,0),-10px)}}@media (prefers-reduced-motion:reduce){.motion-reduce-off{animation:none!important}.motion-reduce-hide{display:none!important}}.scene-bg{background:radial-gradient(ellipse 90% 70% at 50% 0,rgba(0,44,206,.4) 0,transparent 55%),radial-gradient(ellipse 55% 45% at 15% 85%,rgba(0,26,128,.35) 0,transparent 50%),radial-gradient(ellipse 55% 45% at 85% 75%,rgba(0,44,206,.2) 0,transparent 50%),linear-gradient(160deg,#002cce,#001a80 30%,#050508 62%,#000)}.hex-grid-bg{animation:hexScroll 40s linear infinite;background-image:url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='104' viewBox='0 0 60 104'%3E%3Cpath fill='none' stroke='rgba(77,124,255,0.07)' stroke-width='.6' d='m30 0 30 17v35L30 69 0 52V17Z'/%3E%3Cpath fill='none' stroke='rgba(77,124,255,0.05)' stroke-width='.6' d='m30 35 30 17v35l-30 17L0 87V52Z'/%3E%3C/svg%3E\");background-size:60px 104px;opacity:.7}.market-area .area-fill{animation:areaPulse 8s ease-in-out infinite;fill:url(#areaFill)}.market-area .area-line{animation:areaLineDraw 20s ease-in-out infinite;fill:none;filter:drop-shadow(0 0 10px rgba(77,124,255,.35));stroke:url(#chartGrad);stroke-dasharray:2800;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5}.vg-1{animation:volPulse 8s ease-in-out infinite;background:radial-gradient(circle,rgba(0,80,255,.3) 0,transparent 70%)}.vg-2{animation:volPulse 8s ease-in-out -3s infinite;background:radial-gradient(circle,rgba(0,26,128,.35) 0,transparent 70%)}.vg-3{animation:volPulse 8s ease-in-out -5s infinite;background:radial-gradient(circle,rgba(51,102,240,.2) 0,transparent 70%)}.hex-ring{animation:hexRingSpin var(--hrs-dur,50s) linear infinite;left:50%;position:absolute;top:50%;transform:translate(-50%,-50%)}.hex-ring polygon{fill:none;stroke:rgba(77,124,255,.22);stroke-dasharray:10 14;stroke-width:1}.hex-node{fill:var(--blue);filter:drop-shadow(0 0 8px var(--blue))}.hex-r1{--hrs-dur:60s;opacity:.45}.hex-r2{--hrs-dur:42s;animation-direction:reverse;opacity:.6}.hex-r3{--hrs-dur:30s;opacity:.75}.data-col{background:linear-gradient(180deg,transparent 5%,rgba(77,124,255,.12) 30%,rgba(77,124,255,.12) 70%,transparent 95%);height:100%;position:relative;width:1px}.data-col:after,.data-col:before{animation:colDrop var(--cd-dur,7s) linear infinite;animation-delay:var(--cd-delay,0s);background:linear-gradient(180deg,transparent,rgba(147,180,255,.7),transparent);border-radius:3px;content:\"\";height:32px;left:-2px;position:absolute;width:5px}.data-col:after{animation-delay:calc(var(--cd-delay, 0s) - 3.5s)}.col-1{--cd-dur:8s;--cd-delay:0s}.col-2{--cd-dur:10s;--cd-delay:-2s}.col-3{--cd-dur:7s;--cd-delay:-4s}.col-4{--cd-dur:9s;--cd-delay:-1s}.col-5{--cd-dur:11s;--cd-delay:-5s}.col-6{--cd-dur:8.5s;--cd-delay:-3s}.col-7{--cd-dur:10.5s;--cd-delay:-6s}.txn-beam{animation:beamDrop var(--tb-dur,5s) linear infinite;animation-delay:var(--tb-delay,0s);background:linear-gradient(180deg,transparent,rgba(147,180,255,.9),transparent);box-shadow:0 0 12px rgba(77,124,255,.5);height:60px;opacity:0;width:2px}.beam-1{left:18%;--tb-dur:4.5s}.beam-2{left:35%;--tb-dur:6s;--tb-delay:-2s}.beam-3{right:35%;--tb-dur:5.5s;--tb-delay:-1s}.beam-4{right:18%;--tb-dur:7s;--tb-delay:-3.5s}.geo-struct{animation:geoPulse var(--gf-dur,16s) ease-in-out infinite;animation-delay:var(--gf-delay,0s);backdrop-filter:blur(6px);background:rgba(77,124,255,.05);border:1px solid rgba(77,124,255,.25)}.geo-1{height:48px;left:clamp(20px,5vw,72px);top:15%;--gf-dur:2s}.geo-1,.geo-2{border-radius:2px;width:8px}.geo-2{bottom:20%;height:72px;right:clamp(20px,5vw,72px);--gf-dur:2.2s;--gf-delay:-0.5s}.geo-3{height:36px;left:clamp(20px,5vw,72px);top:68%;--gf-dur:1.8s;--gf-delay:-1s}.geo-3,.geo-4{border-radius:2px;width:8px}.geo-4{height:56px;right:clamp(20px,5vw,72px);top:22%;--gf-dur:2.4s;--gf-delay:-0.3s}.emblem-fill{fill:rgba(0,44,206,.08);stroke:none}.emblem-glow{fill:none;filter:blur(8px);stroke:rgba(77,124,255,.14);stroke-width:14}.emblem-outline{animation:emblemDash 14s linear infinite;fill:none;stroke:url(#emblemStroke);stroke-dasharray:10 14;stroke-linecap:round;stroke-linejoin:round;stroke-width:2}.emblem-outline-inner{animation:emblemDash 10s linear infinite reverse;fill:none;stroke:rgba(147,180,255,.4);stroke-dasharray:4 16;stroke-width:1}.emblem-scan{animation:emblemScan 8s linear infinite;fill:none;stroke:rgba(77,124,255,.28);stroke-dasharray:3 12;stroke-width:1}.emblem-chart{animation:emblemChartDraw 6s ease-in-out infinite;fill:none;stroke:rgba(147,180,255,.35);stroke-dasharray:120;stroke-linecap:round;stroke-linejoin:round;stroke-width:2}.hero-emblem{animation:emblemFloat 10s ease-in-out infinite;left:50%;position:absolute;top:50%;transform:translate(-50%,-50%);z-index:15;width:min(500px,84vw);pointer-events:none}.hero-emblem svg{filter:drop-shadow(0 0 40px rgba(0,80,255,.22))}@media (max-width:1024px){.geo-lg-hide,.holo-lg-hide{display:none!important}}@media (max-width:768px){.col-5,.col-6,.col-7,.hex-r1,.holo-md-hide{display:none!important}}@media (max-width:480px){.geo-sm-hide{display:none!important}}@media (prefers-reduced-motion:reduce){.data-col:after,.data-col:before,.emblem-chart,.emblem-outline,.emblem-outline-inner,.emblem-scan,.geo-struct,.hex-grid-bg,.hex-ring,.hero-emblem,.market-area path,.txn-beam,.volumetric-glow{animation:none!important}}.holo-panel{background:linear-gradient(135deg,rgba(0,26,128,.35),rgba(0,0,0,.45));border:1px solid rgba(77,124,255,.2);box-shadow:0 0 30px rgba(0,60,200,.15),inset 0 1px 0 hsla(0,0%,100%,.06)}.holo-scan:before{animation:holoScan 4s ease-in-out infinite;animation-delay:var(--hf-delay,0s);background:linear-gradient(90deg,transparent,rgba(77,124,255,.08),transparent);content:\"\";height:100%;left:-100%;position:absolute;top:0;width:60%}.holo-glass{background:linear-gradient(135deg,rgba(0,26,128,.35),rgba(0,0,0,.45));border:1px solid rgba(77,124,255,.2);box-shadow:0 0 30px rgba(0,60,200,.15),inset 0 1px 0 hsla(0,0%,100%,.06);position:relative;overflow:hidden;border-radius:14px;padding:10px;backdrop-filter:blur(24px)}.fh-holo{animation:holoFloat var(--hf-dur,20s) ease-in-out infinite;animation-delay:var(--hf-delay,0s)}.float-icon{align-items:center;color:rgba(147,180,255,.55);display:flex;height:52px;justify-content:center;width:52px}.float-icon svg{display:block;height:28px;width:28px}.line-chart-path{animation:lineDraw 3s ease-in-out infinite;fill:none;stroke:url(#lineGrad);stroke-dasharray:200;stroke-width:1.5}.bar-fill{animation:barPulse 2s ease-in-out infinite;animation-delay:calc(var(--i)*.15s);background:linear-gradient(180deg,var(--blue-light),var(--primary));border-radius:2px 2px 0 0;flex:1;opacity:.8}.donut-ring{animation:donutSpin 12s linear infinite;background:conic-gradient(var(--blue) 0 72%,rgba(77,124,255,.15) 72% 100%);border-radius:50%;height:36px;position:relative;width:36px}.donut-ring:after{background:rgba(8,16,40,.9);border-radius:50%;content:\"\";inset:6px;position:absolute}.candle{animation:candlePulse 2.5s ease-in-out infinite;animation-delay:calc(var(--i)*.2s);background:var(--blue-light);border-radius:1px;position:relative;width:6px}.candle:after,.candle:before{background:rgba(147,180,255,.5);content:\"\";left:50%;position:absolute;transform:translateX(-50%);width:1px}.candle:before{height:6px;top:-6px}.candle:after{bottom:-4px;height:4px}.candle.down{background:rgba(0,80,255,.45)}.cta-shine:before{animation:ctaShine 4s ease-in-out infinite;background:linear-gradient(105deg,transparent 35%,hsla(0,0%,100%,.35) 50%,transparent 65%);content:\"\";inset:0;position:absolute}@media (prefers-reduced-motion:reduce){.bar-fill,.candle,.cta-shine:before,.donut-ring,.fh-holo,.holo-scan:before,.line-chart-path{animation:none!important}}";
+  ".finance-hero,.finance-hero *{box-sizing:border-box}.finance-hero{position:relative;display:flex;min-height:100svh;align-items:center;justify-content:center;overflow:hidden;background:var(--grad-scene);margin:0}.fh-rig{position:absolute;inset:0}.fh-abs{position:absolute;inset:0}.fh-cols{position:absolute;inset:0;z-index:2;display:flex;justify-content:space-between;padding:0 clamp(40px,10vw,160px);pointer-events:none}.fh-hex-sys{position:absolute;left:50%;top:50%;z-index:1;pointer-events:none;transform:translate(-50%,-50%)}.fh-vol{border-radius:50%;filter:blur(80px);mix-blend-mode:screen}.fh-vol-1{top:-8%;left:15%;width:45vw;height:45vw}.fh-vol-2{bottom:-5%;right:8%;width:38vw;height:38vw}.fh-vol-3{top:42%;left:2%;width:28vw;height:28vw}.fh-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}.fh-holo{position:absolute;z-index:6}.fh-content{position:relative;z-index:20;text-align:center;max-width:820px;padding:0 24px;margin:0 20px;overflow:visible}.fh-content .fh-holo{z-index:1;pointer-events:none}.fh-content .fh-title,.fh-content .fh-sub,.fh-content .fh-cta{position:relative;z-index:2}.fh-title{font-size:clamp(1.85rem,4.2vw,3.1rem);font-weight:800;line-height:1.1;letter-spacing:-.03em;color:#fff;margin:0 0 36px}.fh-sub{font-size:clamp(.95rem,1.8vw,1.15rem);color:#fff;line-height:1.65;max-width:520px;margin:0 auto 32px;opacity:.88}.fh-cta{display:inline-flex;align-items:center;gap:10px;padding:16px 34px;font-size:.95rem;font-weight:600;color:var(--primary);text-decoration:none;border-radius:999px;background:#fff;border:1px solid rgba(255,255,255,.2);box-shadow:0 4px 24px rgba(0,0,0,.18);position:relative;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}.fh-cta:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.22)}.fh-bars{display:flex;align-items:flex-end;gap:4px;height:36px;width:56px}.fh-candles{display:flex;align-items:flex-end;justify-content:center;gap:5px;height:36px;width:56px}.fh-line{width:56px;height:32px}@media(max-width:768px){.fh-hide-md{display:none!important}}.finance-hero{--primary:#002cce;--blue:#4d7cff;--blue-light:#6b9aff;--blue-deep:#001a80;--grad-scene:linear-gradient(145deg,#002cce,#001a80 35%,#0a0a12 65%,#000)}@keyframes hexScroll{0%{background-position:0 0}to{background-position:60px 104px}}@keyframes areaPulse{0%,to{opacity:.7}50%{opacity:1}}@keyframes areaLineDraw{0%{stroke-dashoffset:2800}45%{stroke-dashoffset:0}55%{stroke-dashoffset:0}to{stroke-dashoffset:-2800}}@keyframes volPulse{0%,to{opacity:.5;transform:scale(1)}50%{opacity:.85;transform:scale(1.08)}}@keyframes hexRingSpin{to{transform:translate(-50%,-50%) rotate(1turn)}}@keyframes colDrop{0%{opacity:0;top:-8%}8%{opacity:.9}92%{opacity:.9}to{opacity:0;top:108%}}@keyframes beamDrop{0%{opacity:0;transform:translateY(-80px)}10%{opacity:1}90%{opacity:1}to{opacity:0;transform:translateY(110vh)}}@keyframes geoPulse{0%,to{opacity:.5;transform:scaleY(1)}50%{opacity:1;transform:scaleY(1.2)}}@keyframes holoScan{0%,to{left:-100%}50%{left:150%}}@keyframes barPulse{0%,to{opacity:.7;transform:scaleY(1)}50%{opacity:1;transform:scaleY(1.15)}}@keyframes lineDraw{0%{opacity:.5;stroke-dashoffset:200}50%{opacity:1;stroke-dashoffset:0}to{opacity:.5;stroke-dashoffset:-200}}@keyframes donutSpin{to{transform:rotate(1turn)}}@keyframes candlePulse{0%,to{opacity:.65;transform:scaleY(1)}50%{opacity:1;transform:scaleY(1.1)}}@keyframes ctaShine{0%,to{transform:translateX(-150%)}50%{transform:translateX(150%)}}@keyframes holoFloat{0%,to{transform:translate(0,0)}50%{transform:translate(var(--hf-x,0),-10px)}}@media (prefers-reduced-motion:reduce){.motion-reduce-off{animation:none!important}.motion-reduce-hide{display:none!important}}.scene-bg{background:radial-gradient(ellipse 90% 70% at 50% 0,rgba(0,44,206,.4) 0,transparent 55%),radial-gradient(ellipse 55% 45% at 15% 85%,rgba(0,26,128,.35) 0,transparent 50%),radial-gradient(ellipse 55% 45% at 85% 75%,rgba(0,44,206,.2) 0,transparent 50%),linear-gradient(160deg,#002cce,#001a80 30%,#050508 62%,#000)}.hex-grid-bg{animation:hexScroll 40s linear infinite;background-image:url(\"data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='104' viewBox='0 0 60 104'%3E%3Cpath fill='none' stroke='rgba(77,124,255,0.07)' stroke-width='.6' d='m30 0 30 17v35L30 69 0 52V17Z'/%3E%3Cpath fill='none' stroke='rgba(77,124,255,0.05)' stroke-width='.6' d='m30 35 30 17v35l-30 17L0 87V52Z'/%3E%3C/svg%3E\");background-size:60px 104px;opacity:.7}.market-area .area-fill{animation:areaPulse 8s ease-in-out infinite;fill:url(#areaFill)}.market-area .area-line{animation:areaLineDraw 20s ease-in-out infinite;fill:none;filter:drop-shadow(0 0 10px rgba(77,124,255,.35));stroke:url(#chartGrad);stroke-dasharray:2800;stroke-linecap:round;stroke-linejoin:round;stroke-width:2.5}.vg-1{animation:volPulse 8s ease-in-out infinite;background:radial-gradient(circle,rgba(0,80,255,.3) 0,transparent 70%)}.vg-2{animation:volPulse 8s ease-in-out -3s infinite;background:radial-gradient(circle,rgba(0,26,128,.35) 0,transparent 70%)}.vg-3{animation:volPulse 8s ease-in-out -5s infinite;background:radial-gradient(circle,rgba(51,102,240,.2) 0,transparent 70%)}.hex-ring{animation:hexRingSpin var(--hrs-dur,50s) linear infinite;left:50%;position:absolute;top:50%;transform:translate(-50%,-50%)}.hex-ring polygon{fill:none;stroke:rgba(77,124,255,.22);stroke-dasharray:10 14;stroke-width:1}.hex-node{fill:var(--blue);filter:drop-shadow(0 0 8px var(--blue))}.hex-r1{--hrs-dur:60s;opacity:.45}.hex-r2{--hrs-dur:42s;animation-direction:reverse;opacity:.6}.hex-r3{--hrs-dur:30s;opacity:.75}.data-col{background:linear-gradient(180deg,transparent 5%,rgba(77,124,255,.12) 30%,rgba(77,124,255,.12) 70%,transparent 95%);height:100%;position:relative;width:1px}.data-col:after,.data-col:before{animation:colDrop var(--cd-dur,7s) linear infinite;animation-delay:var(--cd-delay,0s);background:linear-gradient(180deg,transparent,rgba(147,180,255,.7),transparent);border-radius:3px;content:\"\";height:32px;left:-2px;position:absolute;width:5px}.data-col:after{animation-delay:calc(var(--cd-delay, 0s) - 3.5s)}.col-1{--cd-dur:8s;--cd-delay:0s}.col-2{--cd-dur:10s;--cd-delay:-2s}.col-3{--cd-dur:7s;--cd-delay:-4s}.col-4{--cd-dur:9s;--cd-delay:-1s}.col-5{--cd-dur:11s;--cd-delay:-5s}.col-6{--cd-dur:8.5s;--cd-delay:-3s}.col-7{--cd-dur:10.5s;--cd-delay:-6s}.txn-beam{animation:beamDrop var(--tb-dur,5s) linear infinite;animation-delay:var(--tb-delay,0s);background:linear-gradient(180deg,transparent,rgba(147,180,255,.9),transparent);box-shadow:0 0 12px rgba(77,124,255,.5);height:60px;opacity:0;width:2px}.beam-1{left:18%;--tb-dur:4.5s}.beam-2{left:35%;--tb-dur:6s;--tb-delay:-2s}.beam-3{right:35%;--tb-dur:5.5s;--tb-delay:-1s}.beam-4{right:18%;--tb-dur:7s;--tb-delay:-3.5s}.geo-struct{animation:geoPulse var(--gf-dur,16s) ease-in-out infinite;animation-delay:var(--gf-delay,0s);backdrop-filter:blur(6px);background:rgba(77,124,255,.05);border:1px solid rgba(77,124,255,.25)}.geo-1{height:48px;left:clamp(20px,5vw,72px);top:15%;--gf-dur:2s}.geo-1,.geo-2{border-radius:2px;width:8px}.geo-2{bottom:20%;height:72px;right:clamp(20px,5vw,72px);--gf-dur:2.2s;--gf-delay:-0.5s}.geo-3{height:36px;left:clamp(20px,5vw,72px);top:68%;--gf-dur:1.8s;--gf-delay:-1s}.geo-3,.geo-4{border-radius:2px;width:8px}.geo-4{height:56px;right:clamp(20px,5vw,72px);top:22%;--gf-dur:2.4s;--gf-delay:-0.3s}@media (max-width:1024px){.geo-lg-hide,.holo-lg-hide{display:none!important}}@media (max-width:768px){.col-5,.col-6,.col-7,.hex-r1,.holo-md-hide{display:none!important}}@media (max-width:480px){.geo-sm-hide{display:none!important}}@media (prefers-reduced-motion:reduce){.data-col:after,.data-col:before,.geo-struct,.hex-grid-bg,.hex-ring,.market-area path,.txn-beam,.volumetric-glow{animation:none!important}}.holo-panel{background:linear-gradient(135deg,rgba(0,26,128,.35),rgba(0,0,0,.45));border:1px solid rgba(77,124,255,.2);box-shadow:0 0 30px rgba(0,60,200,.15),inset 0 1px 0 hsla(0,0%,100%,.06)}.holo-scan:before{animation:holoScan 4s ease-in-out infinite;animation-delay:var(--hf-delay,0s);background:linear-gradient(90deg,transparent,rgba(77,124,255,.08),transparent);content:\"\";height:100%;left:-100%;position:absolute;top:0;width:60%}.holo-glass{background:linear-gradient(135deg,rgba(0,26,128,.35),rgba(0,0,0,.45));border:1px solid rgba(77,124,255,.2);box-shadow:0 0 30px rgba(0,60,200,.15),inset 0 1px 0 hsla(0,0%,100%,.06);position:relative;overflow:hidden;border-radius:14px;padding:10px;backdrop-filter:blur(24px)}.fh-holo{animation:holoFloat var(--hf-dur,20s) ease-in-out infinite;animation-delay:var(--hf-delay,0s)}.float-icon{align-items:center;color:rgba(147,180,255,.55);display:flex;height:52px;justify-content:center;width:52px}.float-icon svg{display:block;height:28px;width:28px}.line-chart-path{animation:lineDraw 3s ease-in-out infinite;fill:none;stroke:url(#lineGrad);stroke-dasharray:200;stroke-width:1.5}.bar-fill{animation:barPulse 2s ease-in-out infinite;animation-delay:calc(var(--i)*.15s);background:linear-gradient(180deg,var(--blue-light),var(--primary));border-radius:2px 2px 0 0;flex:1;opacity:.8}.donut-ring{animation:donutSpin 12s linear infinite;background:conic-gradient(var(--blue) 0 72%,rgba(77,124,255,.15) 72% 100%);border-radius:50%;height:36px;position:relative;width:36px}.donut-ring:after{background:rgba(8,16,40,.9);border-radius:50%;content:\"\";inset:6px;position:absolute}.candle{animation:candlePulse 2.5s ease-in-out infinite;animation-delay:calc(var(--i)*.2s);background:var(--blue-light);border-radius:1px;position:relative;width:6px}.candle:after,.candle:before{background:rgba(147,180,255,.5);content:\"\";left:50%;position:absolute;transform:translateX(-50%);width:1px}.candle:before{height:6px;top:-6px}.candle:after{bottom:-4px;height:4px}.candle.down{background:rgba(0,80,255,.45)}.cta-shine:before{animation:ctaShine 4s ease-in-out infinite;background:linear-gradient(105deg,transparent 35%,hsla(0,0%,100%,.35) 50%,transparent 65%);content:\"\";inset:0;position:absolute}@media (prefers-reduced-motion:reduce){.bar-fill,.candle,.cta-shine:before,.donut-ring,.fh-holo,.holo-scan:before,.line-chart-path{animation:none!important}}";
 
 const HERO_SCOPE = '.finance-hero';
 const KEYFRAME_PREFIX = 'fh-';
@@ -113,9 +113,10 @@ const SCOPED_CSS = scopeHeroCss(COMPRESSED_CSS);
 
 export type HoloItem = {
   id: string;
-  side: 'left' | 'right';
-  top: string;
-  inset: string;
+  top?: string;
+  left?: string;
+  right?: string;
+  bottom?: string;
   duration: number;
   delay: number;
   hzX: number;
@@ -128,8 +129,6 @@ export type HoloItem = {
     | 'donut'
     | 'bars'
     | 'ledger'
-    | 'candlestick'
-    | 'cart'
     | 'trend';
 };
 
@@ -164,125 +163,87 @@ export const HEX_RINGS = [
   },
 ] as const;
 
+/** Finance icons positioned around the hero text block */
 export const HOLO_ITEMS: HoloItem[] = [
   {
     id: '1',
-    side: 'left',
-    top: '8%',
-    inset: 'clamp(110px, 22vw, 270px)',
+    top: '-10%',
+    left: '0%',
     duration: 20,
     delay: 0,
-    hzX: 5,
-    type: 'dollar',
-  },
-  {
-    id: '7',
-    side: 'left',
-    top: '26%',
-    inset: 'clamp(56px, 12vw, 150px)',
-    duration: 24,
-    delay: -4,
-    hzX: -4,
-    hide: 'holo-lg-hide',
-    type: 'ledger',
-  },
-  {
-    id: '5',
-    side: 'left',
-    top: '46%',
-    inset: 'clamp(120px, 24vw, 290px)',
-    duration: 22,
-    delay: -5,
-    hzX: 5,
-    hide: 'holo-lg-hide',
-    type: 'donut',
-  },
-  {
-    id: '9',
-    side: 'left',
-    top: '64%',
-    inset: 'clamp(60px, 13vw, 160px)',
-    duration: 21,
-    delay: -3,
-    hzX: 5,
-    hide: 'holo-md-hide',
-    type: 'cart',
-  },
-  {
-    id: '3',
-    side: 'left',
-    top: '82%',
-    inset: 'clamp(110px, 22vw, 270px)',
-    duration: 19,
-    delay: -6,
-    hzX: 5,
-    hide: 'holo-md-hide',
-    type: 'bank',
-  },
-  {
-    id: '2',
-    side: 'right',
-    top: '16%',
-    inset: 'clamp(60px, 13vw, 160px)',
-    duration: 22,
-    delay: -3,
-    hzX: -5,
-    type: 'line',
-  },
-  {
-    id: '8',
-    side: 'right',
-    top: '34%',
-    inset: 'clamp(120px, 24vw, 290px)',
-    duration: 21,
-    delay: -7,
     hzX: 4,
-    hide: 'holo-lg-hide',
-    type: 'candlestick',
-  },
-  {
-    id: '6',
-    side: 'right',
-    top: '54%',
-    inset: 'clamp(56px, 12vw, 150px)',
-    duration: 18,
-    delay: -8,
-    hzX: -5,
-    hide: 'holo-lg-hide',
-    type: 'bars',
-  },
-  {
-    id: '10',
-    side: 'right',
-    top: '72%',
-    inset: 'clamp(110px, 22vw, 270px)',
-    duration: 20,
-    delay: -6,
-    hzX: -5,
-    hide: 'holo-md-hide',
     type: 'trend',
   },
   {
-    id: '4',
-    side: 'right',
-    top: '88%',
-    inset: 'clamp(64px, 13vw, 165px)',
-    duration: 23,
+    id: '2',
+    top: '-8%',
+    right: '2%',
+    duration: 22,
     delay: -2,
-    hzX: -5,
+    hzX: -4,
+    type: 'line',
+  },
+  {
+    id: '3',
+    top: '36%',
+    left: '-6%',
+    duration: 21,
+    delay: -3,
+    hzX: 5,
+    type: 'dollar',
     hide: 'holo-md-hide',
+  },
+  {
+    id: '4',
+    top: '38%',
+    right: '-4%',
+    duration: 19,
+    delay: -4,
+    hzX: -5,
+    type: 'bank',
+    hide: 'holo-md-hide',
+  },
+  {
+    id: '5',
+    bottom: '6%',
+    left: '6%',
+    duration: 23,
+    delay: -1,
+    hzX: 4,
     type: 'card',
+  },
+  {
+    id: '6',
+    bottom: '4%',
+    right: '8%',
+    duration: 18,
+    delay: -5,
+    hzX: -4,
+    type: 'ledger',
+  },
+  {
+    id: '7',
+    top: '14%',
+    left: '-12%',
+    duration: 24,
+    delay: -6,
+    hzX: 3,
+    type: 'bars',
+    hide: 'holo-lg-hide',
+  },
+  {
+    id: '8',
+    top: '16%',
+    right: '-10%',
+    duration: 20,
+    delay: -7,
+    hzX: -3,
+    type: 'donut',
+    hide: 'holo-lg-hide',
   },
 ];
 
 export const BAR_HEIGHTS = [50, 85, 40, 75, 60];
-export const CANDLE_HEIGHTS = [
-  { h: 55, down: false },
-  { h: 35, down: true },
-  { h: 70, down: false },
-  { h: 45, down: false },
-  { h: 30, down: true },
-];
 
 export const DATA_COLUMNS = [
   { cls: 'col-1' },
@@ -309,8 +270,8 @@ export const GEO_STRUCTS = [
 ];
 
 export const HOLO_CHAINS = [
-  ['holo-1', 'holo-7', 'holo-5', 'holo-9', 'holo-3'],
-  ['holo-2', 'holo-8', 'holo-6', 'holo-10', 'holo-4'],
+  ['holo-1', 'holo-7', 'holo-3', 'holo-5'],
+  ['holo-2', 'holo-8', 'holo-4', 'holo-6'],
 ] as const;
 
 type GridEdge = { i: number; j: number; vertical: boolean; phase: number };
@@ -546,24 +507,6 @@ function useFinanceCanvases(containerRef: RefObject<HTMLElement | null>) {
         }
       });
 
-      const leftMid = hero.querySelector('[data-holo="holo-5"]');
-      const rightMid = hero.querySelector('[data-holo="holo-6"]');
-      if (
-        leftMid &&
-        rightMid &&
-        (leftMid as HTMLElement).offsetParent &&
-        (rightMid as HTMLElement).offsetParent
-      ) {
-        const lb = leftMid.getBoundingClientRect();
-        const rb = rightMid.getBoundingClientRect();
-        routePaths.push({
-          a: { x: lb.right - r.left, y: lb.top + lb.height / 2 - r.top },
-          b: { x: rb.left - r.left, y: rb.top + rb.height / 2 - r.top },
-          phase: Math.random() * 6,
-          bridge: true,
-        });
-      }
-
       routeSparks = routePaths.map((_, i) => ({
         path: i,
         t: Math.random(),
@@ -732,24 +675,6 @@ function HoloContent({ item }: HoloProps) {
           <path d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z' />
         </svg>
       );
-    case 'candlestick':
-      return (
-        <div className='fh-candles'>
-          {CANDLE_HEIGHTS.map((c, i) => (
-            <div
-              key={i}
-              className={`candle motion-reduce-off ${c.down ? 'down' : ''}`}
-              style={{ height: `${c.h}%`, ['--i' as string]: i }}
-            />
-          ))}
-        </div>
-      );
-    case 'cart':
-      return (
-        <svg viewBox='0 0 24 24' fill='currentColor'>
-          <path d='M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1.003 1.003 0 0 0 20 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z' />
-        </svg>
-      );
     case 'trend':
       return (
         <svg viewBox='0 0 24 24' fill='currentColor'>
@@ -761,48 +686,16 @@ function HoloContent({ item }: HoloProps) {
   }
 }
 
-function HeroEmblem() {
-  return (
-    <div className='hero-emblem motion-reduce-off' aria-hidden>
-      <svg
-        viewBox='0 0 220 240'
-        xmlns='http://www.w3.org/2000/svg'
-        style={{ width: '100%', height: 'auto', display: 'block' }}
-      >
-        <defs>
-          <linearGradient id='emblemStroke' x1='0' y1='0' x2='1' y2='1'>
-            <stop offset='0%' stopColor='#4d7cff' />
-            <stop offset='50%' stopColor='#93b4ff' />
-            <stop offset='100%' stopColor='#002CCE' />
-          </linearGradient>
-        </defs>
-        <path
-          className='emblem-glow'
-          d='M110,16 L188,58 L188,148 L110,224 L32,148 L32,58 Z'
-        />
-        <path
-          className='emblem-fill'
-          d='M110,16 L188,58 L188,148 L110,224 L32,148 L32,58 Z'
-        />
-        <path
-          className='emblem-scan'
-          d='M52,90 H168 M52,120 H168 M52,150 H168 M52,180 H168'
-        />
-        <path
-          className='emblem-outline-inner'
-          d='M110,40 L166,72 L166,136 L110,196 L54,136 L54,72 Z'
-        />
-        <path
-          className='emblem-outline'
-          d='M110,16 L188,58 L188,148 L110,224 L32,148 L32,58 Z'
-        />
-        <path
-          className='emblem-chart'
-          d='M58,168 L88,148 L118,158 L148,118 L178,128'
-        />
-      </svg>
-    </div>
-  );
+function holoStyle(item: HoloItem): CSSProperties {
+  return {
+    top: item.top,
+    left: item.left,
+    right: item.right,
+    bottom: item.bottom,
+    ['--hf-delay' as string]: `${Math.abs(item.delay)}s`,
+    ['--hf-dur' as string]: `${item.duration}s`,
+    ['--hf-x' as string]: `${item.hzX}px`,
+  };
 }
 
 export default function FinanceHero({
@@ -921,34 +814,26 @@ export default function FinanceHero({
             className='fh-canvas motion-reduce-hide'
             style={{ zIndex: 5 }}
           />
-          {HOLO_ITEMS.map((item) => (
-            <div
-              key={item.id}
-              data-holo={`holo-${item.id}`}
-              className={`holo-glass holo-scan fh-holo motion-reduce-off ${item.hide ?? ''}`}
-              style={
-                {
-                  top: item.top,
-                  [item.side]: item.inset,
-                  ['--hf-delay' as string]: `${Math.abs(item.delay)}s`,
-                  ['--hf-dur' as string]: `${item.duration}s`,
-                  ['--hf-x' as string]: `${item.hzX}px`,
-                } as CSSProperties
-              }
-            >
-              <div className='float-icon'>
-                <HoloContent item={item} />
-              </div>
-            </div>
-          ))}
         </div>
-        <HeroEmblem />
         <motion.div
           className='fh-content'
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
+          {HOLO_ITEMS.map((item) => (
+            <div
+              key={item.id}
+              data-holo={`holo-${item.id}`}
+              className={`holo-glass holo-scan fh-holo motion-reduce-off ${item.hide ?? ''}`}
+              style={holoStyle(item)}
+              aria-hidden
+            >
+              <div className='float-icon'>
+                <HoloContent item={item} />
+              </div>
+            </div>
+          ))}
           <h1 className='fh-title'>{heading}</h1>
           {subheading && <p className='fh-sub'>{subheading}</p>}
           <a href={buttonHref} className='fh-cta cta-shine'>
